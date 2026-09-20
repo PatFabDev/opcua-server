@@ -1,0 +1,12 @@
+services:
+  opcua-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: opcua-server
+
+    ports:
+      - "4840:4840"
+
+    restart: unless-stopped
